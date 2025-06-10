@@ -1,7 +1,7 @@
 # aqua-blue
 Lightweight and basic reservoir computing library
 
-[![Custom shields.io](https://img.shields.io/badge/docs-brightgreen?logo=github&logoColor=green&label=gh-pages)](https://chicago-club-management-company.github.io/aqua-blue/)
+[![Custom shields.io](https://img.shields.io/badge/docs-brightgreen?logo=github&logoColor=green&label=gh-pages)](https://jwjeffr.github.io/aqua-blue/)
 
 
 [![PyPI version shields.io](https://img.shields.io/pypi/v/aqua-blue.svg)](https://pypi.python.org/pypi/aqua-blue/)
@@ -16,7 +16,7 @@ Lightweight and basic reservoir computing library
 
 ## 🐜 Found a bug?
 
-Please open an issue [here](https://github.com/Chicago-Club-Management-Company/aqua-blue/issues) if you found a bug!
+Please open an issue [here](https://github.com/jwjeffr/aqua-blue/issues) if you found a bug!
 The easier it is to reproduce the bug, the faster we will find a solution to the problem. Please consider including the
 following info in your issue:
 
@@ -26,7 +26,7 @@ following info in your issue:
 
 ## 🔧 Contributing
 
-Please see [CONTRIBUTING.md](https://github.com/Chicago-Club-Management-Company/aqua-blue/blob/main/CONTRIBUTING.md)
+Please see [CONTRIBUTING.md](https://github.com/jwjeffr/aqua-blue/blob/main/CONTRIBUTING.md)
 for instructions on how to contribute to `aqua-blue` ☺
 
 ## 📥 Installation
@@ -77,6 +77,6 @@ prediction = normalizer.denormalize(prediction)
 
 ---
 
-![Blue](https://raw.githubusercontent.com/Chicago-Club-Management-Company/aqua-blue/refs/heads/main/assets/blue.jpg)
+![Blue](https://raw.githubusercontent.com/jwjeffr/aqua-blue/refs/heads/main/assets/blue.jpg)
 
 *Blue, the cat behind `aqua-blue`.*

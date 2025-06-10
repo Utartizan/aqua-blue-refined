@@ -124,15 +124,8 @@ __authors__ = [
     "Jackson Henry",
     "Samuel Josephs",
 ]
-__author_emails__ = [
-    "jacob.jeffries@ccmc.global",
-    "hrishikesh.belagali@ccmc.global",
-    "avik.thumati@ccmc.global",
-    "ameen.mahmood@ccmc.global",
-    "jackson.henry@ccmc.global",
-    "samuel.josephs@ccmc.global"
-]
-__url__ = "https://github.com/Chicago-Club-Management-Company/aqua-blue"
+
+__url__ = "https://github.com/jwjeffr/aqua-blue"
 
 from . import utilities as utilities
 from . import reservoirs as reservoirs

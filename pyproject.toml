@@ -9,7 +9,7 @@ description = "Lightweight and basic reservoir computing library"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
-author = { name = "Jacob Jeffries", email = "jacob.jeffries@chicagoclubteam.org" }
+author = { name = "Jacob Jeffries", email = "jwjeffries2000@gmail.com" }
 keywords = [
     "computing",
     "forecasting",
@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Chicago-Club-Management-Company/aqua-blue"
+Homepage = "https://github.com/jwjeffr/aqua-blue"
 
 [project.optional-dependencies]
 dev = [
