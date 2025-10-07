@@ -141,6 +141,12 @@ class DynamicalReservoir(Reservoir):
     Recommended values - [0.9, 1.2] 
     """
 
+    input_scaling: float = 1.0  
+    """
+    Implementing input scaling factor
+
+    """
+
     def __post_init__(self):
 
         """
@@ -167,6 +173,9 @@ class DynamicalReservoir(Reservoir):
                 size=(self.reservoir_dimensionality, self.reservoir_dimensionality)
             )
 
+        if self.input_scaling != 1.0:
+            self.w_in = self.w_in * self.input_scaling
+            
         if self.sparsity:
             self.w_res = make_sparse(self.w_res, self.sparsity, self.generator)
         if logger.isEnabledFor(logging.DEBUG):
