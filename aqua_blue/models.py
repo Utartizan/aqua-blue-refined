@@ -113,7 +113,13 @@ class Model(Generic[DatetimeLike, TimeDeltaLike]):
         logging.debug(f"{self.__class__.__name__}.timestep set to {self.timestep}")
         self.final_time = input_time_series.times[-1]
         logging.debug(f"{self.__class__.__name__}.final_time set to {self.final_time}")
-        self.tz = input_time_series.times.tz
+        
+        if hasattr(input_time_series.times, 'tz'):
+            self.tz = input_time_series.times.tz
+        else:
+            # If the custom attribute is missing (due to downcasting), assume naive timezone
+            self.tz = None
+            
         logging.debug(f"{self.__class__.__name__}.tz set to {self.tz}")
         self.times_dtype = input_time_series.times.dtype
         logging.debug(f"{self.__class__.__name__}.times_detype set to {self.times_dtype}")
