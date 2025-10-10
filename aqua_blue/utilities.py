@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 import numpy as np
-from .time_series import TimeSeries
+from aqua_blue.time_series import TimeSeries
 
 
 @dataclass

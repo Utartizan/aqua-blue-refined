@@ -31,7 +31,8 @@ def main():
             w_res=w_res,
             w_in=w_in,
             spectral_radius=1.2,
-            sparsity=0.99
+            sparsity=0.99,
+            input_scaling=0.855
         ),
         readout=aqua_blue.readouts.LinearReadout()
     )

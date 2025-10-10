@@ -132,3 +132,5 @@ from . import reservoirs as reservoirs
 from . import readouts as readouts
 from . import models as models
 from . import time_series as time_series
+from . import datetimelikearray as datetimelikearray
+

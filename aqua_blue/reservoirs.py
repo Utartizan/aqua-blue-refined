@@ -18,7 +18,7 @@ import logging
 
 import numpy as np
 
-from .utilities import make_sparse, set_spectral
+from aqua_blue.utilities import make_sparse, set_spectral
 
 
 ActivationFunction = Callable[[np.typing.NDArray[np.floating]], np.typing.NDArray[np.floating]]
@@ -147,6 +147,8 @@ class DynamicalReservoir(Reservoir):
 
     """
 
+    w_bias: Optional[np.typing.NDArray[np.floating]] = None
+
     def __post_init__(self):
 
         """
@@ -178,6 +180,10 @@ class DynamicalReservoir(Reservoir):
             
         if self.sparsity:
             self.w_res = make_sparse(self.w_res, self.sparsity, self.generator)
+
+        if self.w_bias is None:
+            self.w_bias = np.zeros(self.reservoir_dimensionality)
+
         if logger.isEnabledFor(logging.DEBUG):
             logging.debug(f"{self.__class__.__name__}.w_res sparsity set to {1.0 - self.w_res.astype(bool).mean():.2%}")
 
@@ -186,6 +192,7 @@ class DynamicalReservoir(Reservoir):
             logging.debug(f"{self.__class__.__name__}.w_res spectral radius set to {np.linalg.norm(self.w_res)}")
         
         self.res_state = np.zeros(self.reservoir_dimensionality)
+
 
     def update_reservoir(self, input_state: np.typing.NDArray[np.floating]) -> np.typing.NDArray[np.floating]:
 
@@ -206,8 +213,10 @@ class DynamicalReservoir(Reservoir):
 
         assert isinstance(self.w_in, np.ndarray)
         assert isinstance(self.w_res, np.ndarray)
+        assert isinstance(self.w_bias, np.ndarray)
 
         self.res_state = (1.0 - self.leaking_rate) * self.res_state + self.leaking_rate * self.activation_function(
-            self.w_in @ input_state + self.w_res @ self.res_state
+            self.w_in @ input_state + self.w_res @ self.res_state + self.w_bias
         )
+        
         return self.res_state

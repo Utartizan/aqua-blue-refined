@@ -18,7 +18,7 @@ import numpy as np
 from datetime import datetime
 from dateutil import parser
 
-from .datetimelikearray import DatetimeLikeArray, TimeDeltaLike, DatetimeLike
+from aqua_blue.datetimelikearray import DatetimeLikeArray, TimeDeltaLike, DatetimeLike
 
 
 logger = logging.getLogger(__name__)

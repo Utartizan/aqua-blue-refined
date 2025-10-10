@@ -15,10 +15,10 @@ from typing import Union, Generic
 
 import numpy as np
 
-from .reservoirs import Reservoir
-from .readouts import Readout
-from .time_series import TimeSeries
-from .datetimelikearray import DatetimeLikeArray, DatetimeLike, TimeDeltaLike
+from aqua_blue.reservoirs import Reservoir
+from aqua_blue.readouts import Readout
+from aqua_blue.time_series import TimeSeries
+from aqua_blue.datetimelikearray import DatetimeLikeArray, DatetimeLike, TimeDeltaLike
 
 import datetime
 
