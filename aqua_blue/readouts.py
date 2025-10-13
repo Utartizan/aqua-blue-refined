@@ -13,6 +13,8 @@ Classes:
 
 from dataclasses import dataclass, field
 from abc import ABC, abstractmethod
+from typing import Optional
+
 import logging
 
 import numpy as np
@@ -151,3 +153,4 @@ class LinearReadout(Readout):
             raise ValueError("Need to train readout before using it")
 
         return self.coefficients @ reservoir_state
+
